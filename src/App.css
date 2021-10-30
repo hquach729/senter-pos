@@ -1,0 +1,444 @@
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* LOGIN CSS */
+.ui.segment.Login {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: #002b487d;
+}
+
+.column.Login {
+	max-width: 500px;
+}
+
+/* ACCOUNT CSS */
+.ui.segment.Account {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: #002b487d;
+}
+
+.column.Account {
+	width: 100%;
+}
+
+/* DASHBOARD CSS */
+.ui.segment.Dashboard {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: #002b487d;
+}
+
+.column.Dashboard {
+	max-width: 500px;
+}
+
+/* ADD CSS */
+.ui.segment.Add {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	background-color: #002b487d;
+}
+
+.column.Add {
+	width: 100%;
+}
+
+/* BUY CSS */
+.ui.segment.Buy {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1000;
+	/* top: 50%; */
+	background-color: #002b487d;
+}
+
+.column.Buy {
+	width: 100%;
+}
+
+.ui.grid {
+	height: 100vh;
+}
+
+.field.blueIcon i.icon {
+	color: #40b2ff;
+}
+.field.blueIcon div.input input[type='text']::-webkit-input-placeholder {
+	color: #fff;
+}
+.field.blueIcon div.input input[type='password']::-webkit-input-placeholder {
+	color: #fff;
+}
+.ui.left.icon.input input[type='text'] {
+	background-color: rgb(87 194 226 / 20%);
+	font-weight: bold;
+	font-size: x-large;
+	color: #fff;
+}
+.ui.left.icon.input input[type='password'] {
+	background-color: rgb(87 194 226 / 20%);
+	font-weight: bold;
+	font-size: x-large;
+	color: #fff;
+}
+.ui.fluid.left.icon.input input[type='text'] {
+	background-color: rgb(87 194 226 / 20%);
+	font-weight: bold;
+	font-size: x-large;
+	color: #fff;
+}
+.ui.fluid.left.icon.input input[type='password'] {
+	background-color: rgb(87 194 226 / 20%);
+	font-weight: bold;
+	font-size: x-large;
+	color: #fff;
+}
+
+/* BUY SCREEN CSS */
+
+/* TodayDate Buy */
+.two.wide.field.TodayDate label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.TodayDate div.ui.inverted.left.icon.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.two.wide.field.two.wide.field.TodayDate div.ui.inverted.left.icon.input i {
+	color: #00bcd4;
+}
+
+/* Name */
+.two.wide.field.Name label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.Name div.ui.inverted.icon.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.two.wide.field.Name div.ui.inverted.icon.input i {
+	color: #00bcd4;
+}
+
+/* Amount */
+.two.wide.field.Amount label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.Amount div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+/* Phone */
+.two.wide.field.Phone label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.Phone div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.two.wide.field.Phone div.ui.inverted.input i {
+	color: #00bcd4;
+}
+
+.three.wide.field.Phone label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.three.wide.field.Phone div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.three.wide.field.Phone div.ui.inverted.input i {
+	color: #00bcd4;
+}
+
+/* AddNote Class */
+.sixteen.wide.field.AddNote label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.sixteen.wide.field.AddNote div.ui.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.sixteen.wide.field.AddNote div.ui.inverted.input {
+	color: #00bcd4;
+}
+
+/* AddNote Class */
+.thirteen.wide.field.AddNote label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.thirteen.wide.field.AddNote div.ui.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.thirteen.wide.field.AddNote div.ui.inverted.input {
+	color: #00bcd4;
+}
+
+/* AddNote Class */
+.fifteen.wide.field.AddNote label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.fifteen.wide.field.AddNote div.ui.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.fifteen.wide.field.AddNote div.ui.inverted.input {
+	color: #00bcd4;
+}
+
+/* */
+.three.wide.field.TodayDate label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.three.wide.field.TodayDate div.ui.inverted.left.icon.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.three.wide.field.three.wide.field.TodayDate div.ui.inverted.left.icon.input i {
+	color: #00bcd4;
+}
+
+.two.wide.field.TodayDate label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.TodayDate div.ui.inverted.left.icon.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.two.wide.field.two.wide.field.TodayDate div.ui.inverted.left.icon.input i {
+	color: #00bcd4;
+}
+
+.one.wide.field.TodayDate label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.one.wide.field.TodayDate div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.one.wide.field.one.wide.field.TodayDate div.ui.inverted.input i {
+	color: #00bcd4;
+}
+
+/* BuyAccount */
+.two.wide.field.BuyAccount label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.two.wide.field.BuyAccount div.ui.inverted.left.icon.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+.two.wide.field.BuyAccount div.ui.inverted.left.icon.input i {
+	color: #00bcd4;
+}
+
+/* BuyAreaCode */
+.one.wide.field.AreaCode label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.one.wide.field.one.wide.field.AreaCode div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+/* Phone Number */
+.two.wide.field.PhoneNumber label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.two.wide.field.PhoneNumber div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+/* Name */
+.two.wide.field.Name label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.two.wide.field.two.wide.field.Name div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+.three.wide.field.Name label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.three.wide.field.three.wide.field.Name div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+.four.wide.field.Name label {
+	color: #fff;
+	margin-bottom: 10px;
+}
+.four.wide.field.four.wide.field.Name div.ui.inverted.input input {
+	color: white;
+	background-color: #d5c1c124;
+}
+
+/* NEW RECEIPT */
+.ui.yellow.large.celled.selectable.striped.compact.table {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* BUY RECEIPT TABLE  */
+.ui.green.large.celled.selectable.striped.compact.table {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* RENEW RECEIPT */
+.ui.blue.large.celled.selectable.striped.compact.table {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* ACCOUNT TABLE */
+.ui.blue.large.celled.selectable.table {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* ACCOUNT TABLE */
+.ui.blue.large.celled.table {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.pushable {
+	position: relative;
+	border: none;
+	background: transparent;
+	padding: 0;
+	cursor: pointer;
+	outline-offset: 4px;
+	transition: filter 250ms;
+}
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	background: hsl(0deg 0% 0% / 0.25);
+	will-change: transform;
+	transform: translateY(2px);
+	transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.edge {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	background: linear-gradient(
+		to left,
+		hsl(340deg 100% 16%) 0%,
+		hsl(340deg 100% 32%) 8%,
+		hsl(340deg 100% 32%) 92%,
+		hsl(340deg 100% 16%) 100%
+	);
+}
+.front {
+	display: block;
+	position: relative;
+	padding: 12px 42px;
+	border-radius: 12px;
+	font-size: 1.25rem;
+	color: white;
+	background: hsl(345deg 100% 47%);
+	will-change: transform;
+	transform: translateY(-4px);
+	transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.pushable:hover {
+	filter: brightness(110%);
+}
+.pushable:hover .front {
+	transform: translateY(-6px);
+	transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.pushable:active .front {
+	transform: translateY(-2px);
+	transition: transform 34ms;
+}
+.pushable:hover .shadow {
+	transform: translateY(4px);
+	transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.pushable:active .shadow {
+	transform: translateY(1px);
+	transition: transform 34ms;
+}
+.pushable:focus:not(:focus-visible) {
+	outline: none;
+}

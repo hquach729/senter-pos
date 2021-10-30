@@ -1,0 +1,117 @@
+{
+	"scriptComment": {
+		"main": "specify the electron directory to run electron.js"
+	},
+	"productName": "Senter Pure Water",
+	"author": "Hung Quach",
+	"description": "Point of Sales System",
+	"name": "senter-pos",
+	"version": "3.0.5",
+	"private": true,
+	"main": "electron/electron.js",
+	"homepage": "./",
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.6.1",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.0.0",
+		"@testing-library/user-event": "^13.2.1",
+		"@types/jest": "^27.0.1",
+		"@types/node": "^16.7.4",
+		"@types/react": "^17.0.19",
+		"@types/react-dom": "^17.0.9",
+		"@types/react-redux": "^7.1.18",
+		"@types/react-router": "^5.1.16",
+		"@types/react-router-dom": "^5.1.8",
+		"electron-is-dev": "^2.0.0",
+		"escpos": "^3.0.0-alpha.6",
+		"escpos-usb": "^3.0.0-alpha.4",
+		"final-form": "^4.20.2",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-final-form": "^6.5.3",
+		"react-redux": "^7.2.4",
+		"react-router-dom": "^5.2.1",
+		"react-scripts": "4.0.3",
+		"semantic-ui-css": "^2.4.1",
+		"semantic-ui-react": "^2.0.3",
+		"sqlite3": "^5.0.2",
+		"typescript": "~4.4.2",
+		"usb-detection": "^4.10.0"
+	},
+	"scriptsComments": {
+		"start-react": "Will just start the React app only",
+		"build-react": "Will build the React app only",
+		"start-electron": "This will use nodemon to watch for changes in the public folder and then execute electron. If you want to add more folders to be monitored, just add another —-watch followed by the path to that folder",
+		"dev": "Will first run React, wait for it to boot up and then start Electron",
+		"postinstall": "Will install and rebuild sqlite3 for our native electron app",
+		"build": "Builds app for distribution"
+	},
+	"scripts": {
+		"start-react-mac": "export BROWSER=none && react-scripts start",
+		"start-react-win": "set BROWSER=none & react-scripts start",
+		"build-react": "react-scripts build",
+		"start-electron": "nodemon --watch ./public/*.js --exec \"electron . \"",
+		"dev-mac": "concurrently \"yarn start-react-mac\" \"wait-on http://localhost:3000 && yarn start-electron \"",
+		"dev-win": "concurrently \"yarn start-react-win\" \"wait-on http://localhost:3000 & yarn start-electron \"",
+		"postinstall": "electron-builder install-app-deps",
+		"pack-app": "yarn build-react && electron-builder --dir",
+		"build-electron-mac": "mkdir build/src && cp -r electron/. build/electron && cp -r src/shared/. build/src/shared",
+		"build-electron-win": "mkdir build/src & robocopy electron/. build/electron /S & robocopy  src/shared/. build/src/shared /S",
+		"build-mac": "yarn build-react && yarn build-electron-mac && electron-builder build --mac -c.extraMetadata.main=build/electron/electron.js --publish never",
+		"build-win": "yarn build-react & yarn build-electron-win & electron-builder build --win -c.extraMetadata.main=build/electron/electron.js --publish never",
+		"clean-mac": "rm -rf build dist",
+		"clean-win": "rmdir build /S /Q & rmdir dist /S /Q",
+		"start": "react-scripts start",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.1",
+		"electron": "^13.2.3",
+		"electron-builder": "^22.11.7",
+		"nodemon": "^2.0.12",
+		"wait-on": "^6.0.0"
+	},
+	"electronBuildComments": {
+		"appId": "Has to be unique so your app can be identifiable",
+		"files": "All the files you want to be packed in to the archives (asar) by electron-builder. **/* indicates every file inside a particular folder. In this case, I’m packing the entire build folder.",
+		"directories": "The location where electron-builder has to look for resources it needs. In our case, it is the build folder.",
+		"extraResources": "put db stuff here"
+	},
+	"build": {
+		"appId": "com.hquach729.spw",
+		"productName": "Senter Pure Water POS",
+		"copyright": "@2021 hquach729@icloud.com All right reserved",
+		"files": [
+			"build/**/*",
+			"node_modules"
+		],
+		"directories": {
+			"buildResources": "build/"
+		},
+		"extraResources": [
+			{
+				"from": "./db",
+				"to": "db/",
+				"filter": [
+					"**/*"
+				]
+			}
+		]
+	}
+}
